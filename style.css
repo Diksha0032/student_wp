@@ -44,15 +44,23 @@ body {
   padding: 14px 0;
 }
 
+.site-header .container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .brand {
   display: flex;
   align-items: baseline;
   gap: 10px;
+  margin-left: 0;
 }
 
 .brand-mark {
