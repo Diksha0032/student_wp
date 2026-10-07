@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TCET College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-mark">TCET</span>
+      <span class="brand-name">TCET College</span>
+    </div>
+  </div>
+</header>
+
+<main class="container home-main">
+
+  <section class="hero">
+    <h1>TCET College</h1>
+    <p class="hero-sub">A single place for students to register and check records, and for the college to manage them.</p>
+  </section>
+
+  <section class="portal-choice" id="portalChoice">
+    <div class="portal-card" id="studentPortalCard">
+      <h2>Student Portal</h2>
+      <p>Register as a new student or access your existing record.</p>
+      <button class="btn btn-primary" id="openStudentOptions">Continue as Student</button>
+
+      <div class="sub-options hidden" id="studentSubOptions">
+        <a class="btn btn-secondary" href="student.html">New Student</a>
+        <a class="btn btn-secondary" href="existing_student.html">Existing Student</a>
+      </div>
+    </div>
+
+    <div class="portal-card" id="collegePortalCard">
+      <h2>College Portal</h2>
+      <p>College staff login to search and manage student records.</p>
+      <button class="btn btn-primary" id="openCollegeOptions">Continue as College</button>
+
+      <div class="sub-options hidden" id="collegeSubOptions">
+        <a class="btn btn-secondary" href="college.html">College Login</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Dashboard - TCET College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-mark">TCET</span>
+      <span class="brand-name">TCET College</span>
+    </div>
+  </div>
+</header>
+
+<main class="container dashboard-page">
+
+  <h1>College Dashboard</h1>
+  <p class="page-sub">Verify registrations to assign Student IDs, and update attendance for verified students.</p>
+
+  <section class="dashboard-block">
+    <h2>Student Registrations and Records</h2>
+    <form class="search-row" id="studentSearchForm">
+      <input type="search" id="searchStudentId" placeholder="Search by Student ID or name">
+      <button class="btn btn-primary" id="searchStudentBtn" type="submit">Search</button>
+      <button class="btn btn-outline" id="showAllStudents" type="button">Show All</button>
+    </form>
+    <div id="dashboardMessage" class="global-message hidden"></div>
+    <div class="table-wrapper">
+      <table id="studentsTable">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>Registration Status</th>
+            <th>Eligibility</th>
+            <th>Enter Attendance Percentage</th>
+            <th>College Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentsTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="btn-row">
+    <a class="btn btn-outline" href="index.html">Back to Home</a>
+    <button class="btn btn-outline" id="collegeLogout" type="button">Log Out</button>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

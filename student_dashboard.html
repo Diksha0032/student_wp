@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Record - TCET College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-mark">TCET</span>
+      <span class="brand-name">TCET College</span>
+    </div>
+  </div>
+</header>
+
+<main class="container dashboard-page">
+  <h1>My Student Record</h1>
+  <p class="page-sub">Your attendance and eligibility are maintained by the college.</p>
+  <section class="dashboard-block" id="studentDetails" aria-live="polite">
+    <p>Loading your record...</p>
+  </section>
+  <div id="formGlobalMessage" class="global-message hidden"></div>
+  <div class="btn-row">
+    <a class="btn btn-outline" href="index.html">Back to Home</a>
+    <button class="btn btn-outline" id="studentLogout" type="button">Log Out</button>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

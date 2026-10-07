@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Existing Student Login - TCET College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-mark">TCET</span>
+      <span class="brand-name">TCET College</span>
+    </div>
+  </div>
+</header>
+
+<main class="container form-page narrow">
+
+  <h1>Existing Student Login</h1>
+  <p class="page-sub">Log in with the Student ID assigned by the college and your password.</p>
+
+  <div id="formGlobalMessage" class="global-message hidden"></div>
+
+  <form id="existingStudentForm" novalidate>
+
+    <div class="form-row">
+      <label for="loginStudentId">Student ID <span class="required">*</span></label>
+      <input type="text" id="loginStudentId" name="loginStudentId">
+      <span class="error-msg" id="err-loginStudentId"></span>
+    </div>
+
+    <div class="form-row">
+      <label for="loginPassword">Password <span class="required">*</span></label>
+      <input type="password" id="loginPassword" name="loginPassword">
+      <span class="error-msg" id="err-loginPassword"></span>
+    </div>
+
+    <div class="btn-row">
+      <button type="submit" class="btn btn-primary" id="existingStudentLoginBtn">Login</button>
+      <a class="btn btn-outline" href="index.html">Back</a>
+    </div>
+
+  </form>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

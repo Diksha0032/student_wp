@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Student Registration - TCET College</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-mark">TCET</span>
+      <span class="brand-name">TCET College</span>
+    </div>
+  </div>
+</header>
+
+<main class="container form-page">
+
+  <h1>New Student Registration</h1>
+  <p class="page-sub">Fill in all the details below. The college assigns a Student ID after verifying your registration. Fields marked <span class="required">*</span> are required.</p>
+
+  <div id="formGlobalMessage" class="global-message hidden"></div>
+
+  <form id="registrationForm" novalidate>
+
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <div class="form-row">
+        <label for="studentName">Student Name <span class="required">*</span></label>
+        <input type="text" id="studentName" name="studentName" placeholder="Full Name">
+        <span class="error-msg" id="err-studentName"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="text" id="email" name="email" placeholder="name@example.com">
+        <span class="error-msg" id="err-email"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="mobile">Mobile Number <span class="required">*</span></label>
+        <input type="text" id="mobile" name="mobile" placeholder="10 digit number" maxlength="10">
+        <span class="error-msg" id="err-mobile"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="dob">Date of Birth <span class="required">*</span></label>
+        <input type="date" id="dob" name="dob">
+        <span class="error-msg" id="err-dob"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="gender">Gender <span class="required">*</span></label>
+        <select id="gender" name="gender">
+          <option value="">-- Select --</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <span class="error-msg" id="err-gender"></span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Academic Information</legend>
+
+      <div class="form-row">
+        <label for="course">Course <span class="required">*</span></label>
+        <select id="course" name="course">
+          <option value="">-- Select --</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Civil Engineering">Civil Engineering</option>
+        </select>
+        <span class="error-msg" id="err-course"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="year">Year <span class="required">*</span></label>
+        <select id="year" name="year">
+          <option value="">-- Select --</option>
+          <option value="First Year">First Year</option>
+          <option value="Second Year">Second Year</option>
+          <option value="Third Year">Third Year</option>
+          <option value="Fourth Year">Fourth Year</option>
+        </select>
+        <span class="error-msg" id="err-year"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="division">Division <span class="required">*</span></label>
+        <input type="text" id="division" name="division" placeholder="e.g. A">
+        <span class="error-msg" id="err-division"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="qualification">Previous Qualification <span class="required">*</span></label>
+        <input type="text" id="qualification" name="qualification" placeholder="e.g. HSC">
+        <span class="error-msg" id="err-qualification"></span>
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Course Preference</legend>
+
+      <div class="form-row">
+        <label for="firstPreference">First Course Preference <span class="required">*</span></label>
+        <select id="firstPreference" name="firstPreference">
+          <option value="">-- Select --</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Civil Engineering">Civil Engineering</option>
+        </select>
+        <span class="error-msg" id="err-firstPreference"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="secondPreference">Second Course Preference <span class="required">*</span></label>
+        <select id="secondPreference" name="secondPreference">
+          <option value="">-- Select --</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Civil Engineering">Civil Engineering</option>
+        </select>
+        <span class="error-msg" id="err-secondPreference"></span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Emergency Contact</legend>
+
+      <div class="form-row">
+        <label for="guardianName">Parent / Guardian Name <span class="required">*</span></label>
+        <input type="text" id="guardianName" name="guardianName">
+        <span class="error-msg" id="err-guardianName"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="relationship">Relationship <span class="required">*</span></label>
+        <input type="text" id="relationship" name="relationship" placeholder="e.g. Father">
+        <span class="error-msg" id="err-relationship"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="emergencyContact">Emergency Contact Number <span class="required">*</span></label>
+        <input type="text" id="emergencyContact" name="emergencyContact" placeholder="10 digit number" maxlength="10">
+        <span class="error-msg" id="err-emergencyContact"></span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Login Information</legend>
+
+      <div class="form-row">
+        <label for="password">Password <span class="required">*</span></label>
+        <input type="password" id="password" name="password" minlength="8">
+        <span class="error-msg" id="err-password"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <span class="error-msg" id="err-confirmPassword"></span>
+      </div>
+    </fieldset>
+
+    <div class="btn-row">
+      <button type="submit" class="btn btn-primary" id="registerBtn">Register Student</button>
+      <button type="button" class="btn btn-outline" id="clearFormBtn">Clear Form</button>
+      <a class="btn btn-outline" href="index.html">Back</a>
+    </div>
+
+  </form>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
