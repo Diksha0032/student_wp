@@ -4,34 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>College Dashboard - TCET College</title>
+<meta name="theme-color" content="#102e5b">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="college-dashboard-page">
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="brand">
-      <span class="brand-mark">TCET</span>
+    <a class="brand" href="index.html" aria-label="TCET College home">
+      <img class="brand-logo" src="tcetlogo.png" alt="">
       <span class="brand-name">TCET College</span>
-    </div>
+    </a>
+    <span class="header-tagline">College services</span>
   </div>
 </header>
 
 <main class="container dashboard-page">
 
+  <div class="page-heading">
+    <span class="page-eyebrow">COLLEGE SERVICES <span aria-hidden="true">/</span> RECORDS</span>
   <h1>College Dashboard</h1>
   <p class="page-sub">Verify registrations to assign Student IDs, and update attendance for verified students.</p>
+  </div>
 
   <section class="dashboard-block">
-    <h2>Student Registrations and Records</h2>
-    <form class="search-row" id="studentSearchForm">
-      <input type="search" id="searchStudentId" placeholder="Search by Student ID or name">
+    <div class="dashboard-block-heading">
+      <div>
+        <span class="section-eyebrow">RECORD MANAGEMENT</span>
+        <h2>Student registrations</h2>
+      </div>
+    </div>
+    <form class="search-row" id="studentSearchForm" role="search">
+      <label class="visually-hidden" for="searchStudentId">Search students by Student ID or name</label>
+      <input type="search" id="searchStudentId" placeholder="Search by Student ID or name" autocomplete="off">
       <button class="btn btn-primary" id="searchStudentBtn" type="submit">Search</button>
       <button class="btn btn-outline" id="showAllStudents" type="button">Show All</button>
     </form>
-    <div id="dashboardMessage" class="global-message hidden"></div>
+    <div id="dashboardMessage" class="global-message hidden" role="status" aria-live="polite"></div>
     <div class="table-wrapper">
       <table id="studentsTable">
+        <caption class="visually-hidden">Student registrations and academic records</caption>
         <thead>
           <tr>
             <th>Student ID</th>
@@ -50,7 +62,7 @@
   </section>
 
   <div class="btn-row">
-    <a class="btn btn-outline" href="index.html">Back to Home</a>
+    <a class="btn btn-outline" href="index.html">Back to portal</a>
     <button class="btn btn-outline" id="collegeLogout" type="button">Log Out</button>
   </div>
 

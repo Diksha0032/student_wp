@@ -4,25 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>New Student Registration - TCET College</title>
+<meta name="theme-color" content="#102e5b">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="registration-page">
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="brand">
-      <span class="brand-mark">TCET</span>
+    <a class="brand" href="index.html" aria-label="TCET College home">
+      <img class="brand-logo" src="tcetlogo.png" alt="">
       <span class="brand-name">TCET College</span>
-    </div>
+    </a>
+    <a class="header-back-link" href="index.html">Back to portal <span aria-hidden="true">→</span></a>
   </div>
 </header>
 
 <main class="container form-page">
 
+  <div class="page-heading">
+    <span class="page-eyebrow">STUDENT SERVICES <span aria-hidden="true">/</span> REGISTRATION</span>
   <h1>New Student Registration</h1>
   <p class="page-sub">Fill in all the details below. The college assigns a Student ID after verifying your registration. Fields marked <span class="required">*</span> are required.</p>
+  </div>
 
-  <div id="formGlobalMessage" class="global-message hidden"></div>
+  <div id="formGlobalMessage" class="global-message hidden" role="alert" aria-live="assertive"></div>
 
   <form id="registrationForm" novalidate>
 

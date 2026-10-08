@@ -4,43 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Existing Student Login - TCET College</title>
+<meta name="theme-color" content="#102e5b">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="auth-page student-auth-page">
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="brand">
-      <span class="brand-mark">TCET</span>
+    <a class="brand" href="index.html" aria-label="TCET College home">
+      <img class="brand-logo" src="tcetlogo.png" alt="">
       <span class="brand-name">TCET College</span>
-    </div>
+    </a>
+    <a class="header-back-link" href="index.html">Back to portal <span aria-hidden="true">→</span></a>
   </div>
 </header>
 
 <main class="container form-page narrow">
 
-  <h1>Existing Student Login</h1>
-  <p class="page-sub">Log in with the Student ID assigned by the college and your password.</p>
+  <div class="page-heading">
+    <span class="page-eyebrow">STUDENT SERVICES <span aria-hidden="true">/</span> SIGN IN</span>
+    <h1>Existing Student Login</h1>
+    <p class="page-sub">Log in with the Student ID assigned by the college and your password.</p>
+  </div>
 
-  <div id="formGlobalMessage" class="global-message hidden"></div>
+  <div id="formGlobalMessage" class="global-message hidden" role="alert" aria-live="assertive"></div>
 
   <form id="existingStudentForm" novalidate>
 
     <div class="form-row">
       <label for="loginStudentId">Student ID <span class="required">*</span></label>
-      <input type="text" id="loginStudentId" name="loginStudentId">
+      <input type="text" id="loginStudentId" name="loginStudentId" placeholder="Enter your Student ID" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="err-loginStudentId" required>
       <span class="error-msg" id="err-loginStudentId"></span>
     </div>
 
     <div class="form-row">
       <label for="loginPassword">Password <span class="required">*</span></label>
-      <input type="password" id="loginPassword" name="loginPassword">
+      <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" autocomplete="current-password" aria-describedby="err-loginPassword" required>
       <span class="error-msg" id="err-loginPassword"></span>
     </div>
 
     <div class="btn-row">
-      <button type="submit" class="btn btn-primary" id="existingStudentLoginBtn">Login</button>
-      <a class="btn btn-outline" href="index.html">Back</a>
+      <button type="submit" class="btn btn-primary" id="existingStudentLoginBtn">Sign in</button>
+      <a class="btn btn-outline" href="index.html">Back to portal</a>
     </div>
 
   </form>

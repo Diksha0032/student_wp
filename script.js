@@ -14,6 +14,7 @@ function showError(fieldId, message) {
   var input = document.getElementById(fieldId);
   var error = document.getElementById("err-" + fieldId);
   if (error) error.textContent = message;
+  if (input) input.setAttribute("aria-invalid", "true");
   if (input && input.closest(".form-row")) input.closest(".form-row").classList.add("has-error");
 }
 
@@ -21,6 +22,7 @@ function clearError(fieldId) {
   var input = document.getElementById(fieldId);
   var error = document.getElementById("err-" + fieldId);
   if (error) error.textContent = "";
+  if (input) input.removeAttribute("aria-invalid");
   if (input && input.closest(".form-row")) input.closest(".form-row").classList.remove("has-error");
 }
 
@@ -58,10 +60,14 @@ function initHomePage() {
   var studentButton = document.getElementById("openStudentOptions");
   var collegeButton = document.getElementById("openCollegeOptions");
   if (studentButton) studentButton.addEventListener("click", function () {
-    document.getElementById("studentSubOptions").classList.toggle("hidden");
+    var options = document.getElementById("studentSubOptions");
+    options.classList.toggle("hidden");
+    studentButton.setAttribute("aria-expanded", String(!options.classList.contains("hidden")));
   });
   if (collegeButton) collegeButton.addEventListener("click", function () {
-    document.getElementById("collegeSubOptions").classList.toggle("hidden");
+    var options = document.getElementById("collegeSubOptions");
+    options.classList.toggle("hidden");
+    collegeButton.setAttribute("aria-expanded", String(!options.classList.contains("hidden")));
   });
 }
 
@@ -242,6 +248,7 @@ function initStudentDashboardPage() {
       row.appendChild(document.createTextNode(item[1]));
       details.appendChild(row);
     });
+    details.setAttribute("aria-busy", "false");
   }).catch(function () {
     window.location.href = "existing_student.html";
   });

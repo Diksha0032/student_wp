@@ -4,28 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Student Record - TCET College</title>
+<meta name="theme-color" content="#102e5b">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="student-dashboard-page">
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="brand">
-      <span class="brand-mark">TCET</span>
+    <a class="brand" href="index.html" aria-label="TCET College home">
+      <img class="brand-logo" src="tcetlogo.png" alt="">
       <span class="brand-name">TCET College</span>
-    </div>
+    </a>
+    <span class="header-tagline">Student services</span>
   </div>
 </header>
 
 <main class="container dashboard-page">
+  <div class="page-heading">
+    <span class="page-eyebrow">STUDENT SERVICES <span aria-hidden="true">/</span> MY RECORD</span>
   <h1>My Student Record</h1>
   <p class="page-sub">Your attendance and eligibility are maintained by the college.</p>
-  <section class="dashboard-block" id="studentDetails" aria-live="polite">
+  </div>
+  <section class="dashboard-block student-record-block" id="studentDetails" aria-live="polite" aria-busy="true">
     <p>Loading your record...</p>
   </section>
-  <div id="formGlobalMessage" class="global-message hidden"></div>
+  <div id="formGlobalMessage" class="global-message hidden" role="alert" aria-live="assertive"></div>
   <div class="btn-row">
-    <a class="btn btn-outline" href="index.html">Back to Home</a>
+    <a class="btn btn-outline" href="index.html">Back to portal</a>
     <button class="btn btn-outline" id="studentLogout" type="button">Log Out</button>
   </div>
 </main>

@@ -5,45 +5,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>College Login - TCET College</title>
+<meta name="theme-color" content="#102e5b">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="brand">
-      <span class="brand-mark">TCET</span>
+    <a class="brand" href="index.html" aria-label="TCET College home">
+      <img class="brand-logo" src="tcetlogo.png" alt="">
       <span class="brand-name">TCET College</span>
-    </div>
+    </a>
+    <a class="header-back-link" href="index.html">Back to portal</a>
   </div>
 </header>
 
 <main class="container form-page narrow">
-
   <h1>College Login</h1>
-  <div id="formGlobalMessage" class="global-message hidden"></div>
+  <p class="page-sub">Log in to manage student registrations and records.</p>
+
+  <div id="formGlobalMessage" class="global-message hidden" role="alert" aria-live="assertive"></div>
 
   <form id="collegeLoginForm" novalidate>
-
     <div class="form-row">
       <label for="collegeId">College ID <span class="required">*</span></label>
-      <input type="text" id="collegeId" name="collegeId" placeholder="e.g. TCET_ADMIN">
-      <span class="error-msg" id="err-collegeId"></span>
+      <input type="text" id="collegeId" name="collegeId" placeholder="e.g. TCET_ADMIN" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="err-collegeId">
+      <span class="error-msg" id="err-collegeId" aria-live="polite"></span>
     </div>
 
     <div class="form-row">
       <label for="collegePassword">Password <span class="required">*</span></label>
-      <input type="password" id="collegePassword" name="collegePassword">
-      <span class="error-msg" id="err-collegePassword"></span>
+      <input type="password" id="collegePassword" name="collegePassword" placeholder="Enter your password" autocomplete="current-password" aria-describedby="err-collegePassword">
+      <span class="error-msg" id="err-collegePassword" aria-live="polite"></span>
     </div>
 
     <div class="btn-row">
       <button type="submit" class="btn btn-primary" id="collegeLoginBtn">Login</button>
       <a class="btn btn-outline" href="index.html">Back</a>
     </div>
-
   </form>
-
 </main>
 
 <script src="script.js"></script>

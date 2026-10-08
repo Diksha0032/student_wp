@@ -4,31 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TCET College</title>
+<meta name="theme-color" content="#102e5b">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page">
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="brand">
-      <span class="brand-mark">TCET</span>
+    <a class="brand" href="index.html" aria-label="TCET College home">
+      <img class="brand-logo" src="tcetlogo.png" alt="">
       <span class="brand-name">TCET College</span>
-    </div>
+    </a>
+    <span class="header-tagline">Student &amp; college portal</span>
   </div>
 </header>
 
 <main class="container home-main">
 
   <section class="hero">
-    <h1>TCET College</h1>
-    <p class="hero-sub">A single place for students to register and check records, and for the college to manage them.</p>
+    <span class="home-eyebrow">STUDENT &amp; COLLEGE PORTAL</span>
+    <h1>Student Registration and Record Management System</h1>
+    <p class="hero-sub">Register as a student, view your record, or manage student registrations through the college portal.</p>
   </section>
 
   <section class="portal-choice" id="portalChoice">
     <div class="portal-card" id="studentPortalCard">
+      <span class="portal-number" aria-hidden="true">01</span>
       <h2>Student Portal</h2>
-      <p>Register as a new student or access your existing record.</p>
-      <button class="btn btn-primary" id="openStudentOptions">Continue as Student</button>
+      <p>Register as a new student or log in to view your student record.</p>
+      <button class="btn btn-primary portal-trigger" id="openStudentOptions" type="button" aria-expanded="false" aria-controls="studentSubOptions">
+        Continue as Student <span aria-hidden="true">→</span>
+      </button>
 
       <div class="sub-options hidden" id="studentSubOptions">
         <a class="btn btn-secondary" href="student.html">New Student</a>
@@ -37,9 +43,12 @@
     </div>
 
     <div class="portal-card" id="collegePortalCard">
+      <span class="portal-number" aria-hidden="true">02</span>
       <h2>College Portal</h2>
-      <p>College staff login to search and manage student records.</p>
-      <button class="btn btn-primary" id="openCollegeOptions">Continue as College</button>
+      <p>Log in to review registrations and manage student records.</p>
+      <button class="btn btn-primary portal-trigger" id="openCollegeOptions" type="button" aria-expanded="false" aria-controls="collegeSubOptions">
+        Continue as College <span aria-hidden="true">→</span>
+      </button>
 
       <div class="sub-options hidden" id="collegeSubOptions">
         <a class="btn btn-secondary" href="college.html">College Login</a>
