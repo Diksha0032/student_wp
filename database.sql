@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS student_registration
+CREATE DATABASE IF NOT EXISTS student_registration;
 
 USE student_registration;
 
